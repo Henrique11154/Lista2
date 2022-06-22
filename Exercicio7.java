@@ -1,34 +1,40 @@
 import java.util.Scanner;
 
 public class Exercicio7 {
-    
+
     public static void main(String[] args) {
+
         Scanner entrada = new Scanner(System.in);
 
-        int vetor[];
+        int[] media = new int[5];
+
         int i = 0;
 
-        boolean T = true;
-
-        while (T == true){
-            System.out.print("Digite um número: ");
-            int n = entrada.nextInt(); //numero
-            if(n<0){
-                System.out.println("Digite um número positivo");
-            }else{
-                vetor = new int [n];
-                System.out.print("Você deseja outro numero: (s/n) ");
-                String   opcao = entrada.next(); // continua a pedir um número
-                int media = vetor[i] / vetor.length;
-                i++;
-                if(opcao == "s" || opcao == "S"){
-                    System.out.print("Digite um número: ");
-                    n = entrada.nextInt();
-                }else{
-                    System.out.println(media);
-                    T = false;
-                } 
-            }
+        while (i < 5){
+            System.out.print("Digite um numero inteiro é positivo: ");
+            int numero = entrada.nextInt();
+            media[i] = numero;
+            i++;
+    
         }
-    }
+
+        i = 0;
+        double media2 = 0;
+        int quantos = 0;
+
+        while(i < 5){
+            if(media[i] %3 == 0){
+                media2 = media2 + media[i];
+                quantos++;
+            }
+        i++;
+            
+        }
+
+        if(quantos == 0){
+            System.out.println("Nenhum número divisivel por 3.");
+        } else{
+            System.out.println("A media é " + media2/quantos);
+        }             
+    }  
 }
