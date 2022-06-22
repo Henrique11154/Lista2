@@ -1,12 +1,12 @@
 public class Contador {
-    private int i;
+    private int i = 0;
 
     public void zerar(){
         this.i = 0;
     }
 
     public void incrementar(){
-        this.i = i++;
+        this.i = this.i++;
     }
 
     public int retornar(){

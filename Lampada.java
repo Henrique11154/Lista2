@@ -2,9 +2,16 @@ public class Lampada {
     
     private boolean ligar = false;
 
-    public boolean ligarDesligar(){
-        this.ligar = !ligar;
-        return this.ligar;
+    public void ligarDesligar(){
+        if (this.ligar == true){
+            this.ligar = false;
+        }else{
+            this.ligar = true;
+        }
+    }
+
+    public boolean isLigar() {
+        return ligar;
     }
 
     

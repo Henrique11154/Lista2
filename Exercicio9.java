@@ -10,7 +10,7 @@ public class Exercicio9 {
 
         if(opcao == "s" || opcao == "S"){
             l.ligarDesligar();
-            System.out.println(l);
+            System.out.println(l.isLigar());
         }
     }
 }
